@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+html, body {
+  @apply transition-colors duration-500 ease-in-out min-h-screen;
+}
+
+/* Light Mode */
+.light {
+  @apply bg-white text-black;
+}
+
+/* Dark Mode */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+@layer utilities {
+  /* Text Effects */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Hover Effects */
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  }
+
+  /* Gradient Mask */
+  .gradient-mask {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+
+  /* Movie Card Hover */
+  .movie-card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .movie-card-hover:hover {
+    @apply -translate-y-2 shadow-lg;
+    box-shadow: 0 8px 20px -8px rgba(255, 255, 255, 0.3);
+  }
+}
